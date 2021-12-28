@@ -1,0 +1,11 @@
+{% extends 'umain/base.html' %}
+
+{% block content %}
+<h1>{{event.title}}</h1>
+
+{% if event.photo %}
+<p><img class="img-article-left" src="{{event.photo.url}}"></p>
+{% endif %}
+
+{{event.content|linebreaks}}
+{% endblock %}
